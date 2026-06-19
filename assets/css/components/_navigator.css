@@ -1,0 +1,72 @@
+/* =======================================================
+   MENU DE NAVEGAÇÃO LATERAL (components/_navigator.css)
+   ======================================================= */
+
+.navigator {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Linha vertical exatamente no meio do container */
+.navigator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  z-index: 0;
+}
+
+/* Ícone do topo centralizado na mesma linha */
+.navigator .navigator__icon {
+  position: absolute;
+  top: -30px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Configuração da lista usando GAP para espaçamento limpo */
+.navigator ul {
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* Controla o espaçamento vertical entre as bolinhas sem precisar zerar pontas */
+}
+
+/* Botões redondos dos números */
+.navigator ul li a {
+  color: white;
+  border: solid 2px white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s;
+}
+
+/* Estados Interativos: Hover, Ativo via JS, Ativo via Acessibilidade e Foco por Teclado */
+.navigator ul li a:hover, 
+.navigator ul li a.active,
+.navigator ul li a[aria-current="page"],
+.navigator ul li a:focus-visible {
+  color: var(--primary-color, #B9001F);
+  background-color: white;
+  border-color: white;
+  transform: scale(1.05); /* Um leve feedback de crescimento na seleção */
+  outline: none;
+}

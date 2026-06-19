@@ -1,0 +1,90 @@
+/* ========================================================
+   1. CONFIGURAÇÃO PARA TELAS GRANDES (Laptop / Computador)
+   ======================================================== */
+.gallery {
+  padding: 40px 0;
+  width: 100%;
+}
+
+.gallery ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.gallery ul li {
+  flex-shrink: 0; 
+}
+
+.gallery ul li a img {
+  border: solid 6px white;
+  border-radius: 15px;
+  width: 210px;      
+  height: 130px;     
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery ul li a img:hover {
+  transform: scale(1.05);
+}
+
+/* Customização da barra de rolagem horizontal */
+.gallery ul::-webkit-scrollbar {
+  height: 5px;
+}
+
+.gallery ul::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.gallery ul::-webkit-scrollbar-thumb {
+  background: var(--primary-color, #B9001F);
+  border-radius: 10px;
+}
+
+/* ========================================================
+   2. AJUSTE EXCLUSIVO PARA TELAS PEQUENAS (Celular / Tablet)
+   ======================================================== */
+@media screen and (max-width: 768px) {
+  .gallery {
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .gallery ul {
+    /* ADOTADO FLEX: Traz de volta o comportamento de linha única */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;          /* IMPEDE terminantemente de pular linha */
+    overflow-x: auto;           /* ATIVA a barra de rolagem horizontal com o dedo */
+    gap: 16px; 
+    padding: 0 15px 15px 0;     /* Espaço inferior para a barra de rolagem não cobrir a foto */
+    margin: 0;
+    list-style: none;
+    -webkit-overflow-scrolling: touch; /* Deixa o deslize no celular super suave */
+  }
+
+  .gallery ul li {
+    /* Forçamos uma largura base para os itens na barra horizontal */
+    min-width: 130px;
+    max-width: 130px;
+    width: 100%; 
+    margin: 0;
+  }
+
+  .gallery ul li a img {
+    border: solid 4px white;
+    border-radius: 10px;
+    width: 100%; 
+    height: 85px;               /* Proporção ideal para o formato horizontal no celular */
+    object-fit: cover;
+    display: block;
+  }
+}

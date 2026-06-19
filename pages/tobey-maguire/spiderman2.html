@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiverso | Spiderman 2</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link href="../../assets/css/internal.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+</head>
+<body>
+  <div id="loading-screen" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999; display:flex; justify-content:center; align-items:center; transition: opacity 0.5s;">
+    <img src="../../assets/images/icons/spider.svg" style="width:80px; animation: pulse 1s infinite;" alt="Carregando...">
+  </div>
+
+  <main class="s-wrapper">
+    
+    <video loop autoplay muted playsinline aria-hidden="true">
+      <source src="../../assets/videos/spiderman2-2004-trailer.mp4" type="video/mp4" />
+    </video>
+
+    <div class="s-left-column">
+      <nav class="navigator" aria-label="Navegação entre filmes e início">
+        <div class="navigator__icon">
+          <a href="../../index.html" aria-label="Voltar para a Página Inicial">
+            <img src="../../assets/images/icons/spiderman1.png" alt="Ícone Homem-Aranha" />
+          </a>
+        </div>
+        <ul>
+          <li><a href="spiderman1.html" aria-label="Ir para Homem-Aranha 1">01</a></li>
+          <li><a href="spiderman2.html" aria-label="Filme atual: Homem-Aranha 2">02</a></li>
+          <li><a href="spiderman3.html" aria-label="Ir para Homem-Aranha 3">03</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="s-main-content">
+      
+      <header class="s-main-content__top">
+        <div class="s-logo">
+          <img src="../../assets/images/spiderman-tobey/movie-02/logo.png" alt="Logotipo do filme Homem-Aranha 2 (2004)" title="Spiderman 2 (2004)" />
+        </div>
+
+        <section class="s-description" aria-label="Ficha técnica e sinopse">
+          <div class="pills">
+            <ul>
+              <li>Ano: 2004</li>
+              <li>Diretor: Sam Raimi</li>
+            </ul>
+          </div>
+
+          <div class="s-description__text">
+            <!-- CORRIGIDO: "crisis" alterado para "crise" -->
+            <p><strong>Sinopse:</strong>&nbsp;O pacato Peter Parker enfrenta problemas em sua vida pessoal e amorosa, além de lidar com a crise de seus superpoderes. Ele precisa reassumir o manto do Homem-Aranha para combater o brilhante e perigoso cientista Dr. Otto Octavius, conhecido como Doutor Octopus.</p>
+          </div>
+        </section>
+
+        <section class="s-links" aria-label="Mídias do filme">
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=3j77S7b9-f8" class="link-button" target="_blank" aria-label="Assistir ao trailer oficial de Homem-Aranha 2 no YouTube">
+                <span class="icon">
+                  <div class="play-icon" aria-hidden="true">&nbsp;</div>
+                </span>
+                <span class="label">
+                  Assistir trailer
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+      </header>
+
+      <section class="s-main-content__bottom" aria-label="Galeria de fotos do filme">
+        <div class="gallery">
+          <ul>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-02/gallery/image-01-full.jpg" aria-label="Ampliar imagem 1 da galeria">
+                <img src="../../assets/images/spiderman-tobey/movie-02/gallery/image-01.png" alt="O vilão Doutor Octopus com seus tentáculos mecânicos ativados">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-02/gallery/image-02-full.jpg" aria-label="Ampliar imagem 2 da galeria">
+                <img src="../../assets/images/spiderman-tobey/movie-02/gallery/image-02.png" alt="Homem-Aranha saltando de cabeça para baixo em meio aos prédios de Nova York">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-02/gallery/image-03-full.jpg" aria-label="Ampliar imagem 3 da galeria">
+                <img src="../../assets/images/spiderman-tobey/movie-02/gallery/image-03.png" alt="Peter Parker sem a máscara olhando reflexivo com seu traje de Homem-Aranha rasgado">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="../../assets/scripts/script.js"></script>
+</body>
+</html>

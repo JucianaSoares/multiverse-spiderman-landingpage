@@ -1,0 +1,31 @@
+/* 1. O Reset Universal Seguro (Mexe apenas na estrutura das caixas) */
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* O superpoder que impede o padding de esticar o tamanho do elemento */
+}
+
+/* 2. Estilos Globais e Limpezas de Tags Nativas */
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Faz o link herdar a cor do texto do pai, sem criar aquele azul nativo chato */
+}
+
+img {
+  max-width: 100%;
+  display: block; /* Remove um espacinho em branco fantasma que fica embaixo de imagens */
+}
+
+/* 3. Aqui você define o padrão do seu site (Sem travar o resto do código) */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem; /* Equivalente aos 16px, mas respeita o zoom do usuário */
+  color: #FFF;     /* O branco vira o padrão, mas inputs e botões continuam livres */
+  line-height: 1.5;
+  background-color: #000; /* Ou a sua var(--primary-color) */
+  -webkit-font-smoothing: antialiased; /* Deixa as fontes mais nítidas em telas de alta resolução */
+}

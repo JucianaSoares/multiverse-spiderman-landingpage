@@ -1,0 +1,33 @@
+/* =======================================================
+   COMPONENTE DE ETIQUETAS / PILLS (components/_pills.css)
+   ======================================================= */
+
+.pills ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Permite que as tags pulem de linha se faltar espaço no celular */
+  gap: 10px;       /* Espaçamento perfeito e controlado entre as etiquetas */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pills ul li {
+  background-color: var(--primary-color, #B9001F); /* Cor padrão do Aranha */
+  color: white;
+  padding: 6px 16px; 
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 0.75rem; 
+  font-weight: bold;  
+  letter-spacing: 1px; 
+  display: inline-block; /* Garante que o padding responda perfeitamente na estrutura */
+}
+
+/* DICA DE DESIGN (Opcional): Se quiser que as pills fiquem mais discretas dentro da sinopse */
+/*
+.s-description .pills ul li {
+  background-color: rgba(255, 255, 255, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+*/

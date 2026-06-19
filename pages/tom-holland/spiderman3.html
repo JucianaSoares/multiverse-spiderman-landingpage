@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider-Man | Sem Volta Para Casa</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link href="../../assets/css/internal.css" rel="stylesheet" type="text/css" />
+  <!-- Adicionado o CSS do Fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+</head>
+
+<body>
+  <div id="loading-screen" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999; display:flex; justify-content:center; align-items:center; transition: opacity 0.5s;">
+    <img src="../../assets/images/icons/spider.svg" style="width:80px; animation: pulse 1s infinite;" alt="Carregando...">
+  </div>
+
+  <!-- Ajustado para main envelopando a estrutura central -->
+  <main class="s-wrapper">
+    <!-- Vídeo de fundo com aria-hidden pois é puramente decorativo -->
+    <video autoplay loop muted playsinline aria-hidden="true">
+      <source src="../../assets/videos/spiderman3-2021-trailer.mp4" type="video/mp4" />
+    </video>
+    
+    <!-- Coluna da esquerda com menu de navegação -->
+    <div class="s-left-column">
+      <nav class="navigator" aria-label="Navegação entre filmes">
+        <div class="navigator__icon">
+          <a href="../../index.html" aria-label="Voltar para a página inicial">
+            <img src="../../assets/images/icons/spiderman1-tom.png" alt="Ícone Homem-Aranha" />
+          </a>
+        </div>
+        <ul>
+          <li><a href="spiderman1.html" aria-label="Ir para o Filme 1">01</a></li>
+          <li><a href="spiderman2.html" aria-label="Ir para o Filme 2">02</a></li>
+          <!-- CORRIGIDO: Removido class="active" e aria-current="page" manuais para automação do script.js -->
+          <li><a href="spiderman3.html" aria-label="Filme atual: Filme 3">03</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Modificado para div estrutural interna para herdar o grid/flexbox corretamente -->
+    <div class="s-main-content">
+      
+      <!-- Topo contendo Identificação, Ficha e Sinopse agrupados no header -->
+      <header class="s-main-content__top">
+        <div class="s-logo">
+          <img src="../../assets/images/spiderman-tom/movie-03/logo.png" alt="Logo de Spider-Man: Sem Volta Para Casa" />
+        </div>
+
+        <section class="s-description" aria-label="Ficha técnica e sinopse">
+          <div class="pills">
+            <h2 class="sr-only">Informações Técnicas</h2>
+            <ul>
+              <li>Ano: <time datetime="2021">2021</time></li>
+              <li>Diretor: Jon Watts</li>
+            </ul>
+          </div>
+          <div class="s-description__text">
+            <p><strong>Sinopse:</strong>&nbsp;Com a sua identidade secreta revelada ao mundo, Peter Parker recorre ao Doutor Estranho na esperança de fazer todos esquecerem que ele é o Homem-Aranha. Porém, o feitiço dá errado e rasga o tecido do multiverso, trazendo vilões perigosos de outras realidades que ele agora precisará enfrentar.</p>
+          </div>
+        </section>
+
+        <section class="s-links" aria-label="Mídias do filme">
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=CyiiEJRZjSU" class="link-button" target="_blank" rel="noopener noreferrer">
+                <span class="icon" aria-hidden="true">
+                  <div class="play-icon">&nbsp;</div>
+                </span>
+                <span class="label">
+                  Assistir trailer <span class="sr-only">(abre em uma nova aba)</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </header>
+      
+      <!-- Seção da Galeria com título oculto para leitores de tela -->
+      <section class="s-main-content__bottom" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading" class="sr-only">Galeria de Imagens do Filme</h2>
+        <div class="gallery">
+          <ul>
+            <!-- CORRIGIDO: Adicionado o data-fancybox e apontado o href para a imagem correspondente -->
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-03/gallery/image-01.jpg" aria-label="Ver imagem 1 expandida">
+                <img src="../../assets/images/spiderman-tom/movie-03/gallery/image-01.jpg" alt="Peter Parker conversando com o Doutor Estranho no Sanctum Sanctorum">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-03/gallery/image-02.jpg" aria-label="Ver imagem 2 expandida">
+                <img src="../../assets/images/spiderman-tom/movie-03/gallery/image-02.jpg" alt="Os três Homens-Aranha estão juntos sobre uma estrutura metálica à noite, com as luzes da cidade refletindo na água ao fundo, marcando o encontro épico do multiverso">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-03/gallery/image-03.jpg" aria-label="Ver imagem 3 expandida">
+                <img src="../../assets/images/spiderman-tom/movie-03/gallery/image-03.jpg" alt="O Duende Verde voando em seu planador em meio a fumaça">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-03/gallery/image-04.jpg" aria-label="Ver imagem 4 expandida">
+                <img src="../../assets/images/spiderman-tom/movie-03/gallery/image-04.jpg" alt="O Homem-Aranha com o traje vermelho, preto e dourado aparece agachado sobre destroços metálicos, em meio à iluminação dramática avermelhada, pronto para a ação">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- CORRIGIDO: Inclusão do script do Fancybox antes do script principal -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="../../assets/scripts/script.js"></script>
+</body>
+
+</html>

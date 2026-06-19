@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Amazing Spider-Man | O Espetacular Homem-Aranha</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link href="../../assets/css/internal.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+</head>
+
+<body>
+
+  <div id="loading-screen" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999; display:flex; justify-content:center; align-items:center; transition: opacity 0.5s;">
+    <img src="../../assets/images/icons/spider.svg" style="width:80px; animation: pulse 1s infinite;" alt="Carregando...">
+  </div>
+
+  <main class="s-wrapper">
+    <video autoplay loop muted playsinline aria-hidden="true">
+      <source src="../../assets/videos/amazing-spiderman-2012-trailer.mp4" type="video/mp4" />
+    </video>
+
+    <div class="s-left-column">
+      <nav class="navigator" aria-label="Navegação entre filmes e início">
+        <div class="navigator__icon">
+          <a href="../../index.html" aria-label="Voltar para a Página Inicial">
+            <img src="../../assets/images/icons/spiderman1-andrew.png" alt="Ícone Espetacular Homem-Aranha" />
+          </a>
+        </div>
+        <ul>
+          <li><a href="spiderman1.html" aria-label="Filme atual: O Espetacular Homem-Aranha 1">01</a></li>
+          <li><a href="spiderman2.html" aria-label="Ir para O Espetacular Homem-Aranha 2">02</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="s-main-content">
+      
+      <header class="s-main-content__top">
+        <div class="s-logo">
+          <img src="../../assets/images/spiderman-andrew/movie-01/logo.png" alt="Logotipo do filme O Espetacular Homem-Aranha (2012)" title="O Espetacular Homem-Aranha (2012)" />
+        </div>
+
+        <section class="s-description" aria-label="Ficha técnica e sinopse">
+          <div class="pills">
+            <ul>
+              <li>Ano: 2012</li>
+              <li>Diretor: Marc Webb</li>
+            </ul>
+          </div>
+          <div class="s-description__text">
+            <p><strong>Sinopse:</strong>&nbsp;Peter Parker é um adolescente desajeitado que tenta descobrir quem é e como se tornou a pessoa que é hoje. Ao encontrar uma misteriosa maleta que pertenceu ao seu pai, Peter começa uma jornada para entender o desaparecimento de seus pais, o que o leva diretamente à Oscorp e ao laboratório do Dr. Curt Connors, o Lagarto.</p>
+          </div>
+        </section>
+
+        <section class="s-links" aria-label="Mídias do filme">
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=atCfTRX9RA0" class="link-button" target="_blank" aria-label="Assistir ao trailer oficial no YouTube">
+                <span class="icon">
+                  <div class="play-icon" aria-hidden="true">&nbsp;</div>
+                </span>
+                <span class="label">
+                  Assistir trailer
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </header>
+
+      <section class="s-main-content__bottom" aria-label="Galeria de fotos do filme">
+        <div class="gallery">
+          <ul>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-andrew/movie-01/gallery/image-01-full.jpg" aria-label="Ampliar imagem 1 da galeria">
+                <img src="../../assets/images/spiderman-andrew/movie-01/gallery/image-01.png" alt="Homem-Aranha agachado observando a cidade com as luzes de Nova York ao fundo">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-andrew/movie-01/gallery/image-02-full.jpg" aria-label="Ampliar imagem 2 da galeria">
+                <img src="../../assets/images/spiderman-andrew/movie-01/gallery/image-02.png" alt="Peter Parker de casaco e mochila investigando os laboratórios da Oscorp">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-andrew/movie-01/gallery/image-03-full.jpg" aria-label="Ampliar imagem 3 da galeria">
+                <img src="../../assets/images/spiderman-andrew/movie-01/gallery/image-03.png" alt="O vilão Lagarto rugindo em meio aos esgotos da cidade">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="../../assets/scripts/script.js"></script>
+</body>
+
+</html>

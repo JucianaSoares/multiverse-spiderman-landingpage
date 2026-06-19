@@ -1,0 +1,65 @@
+/* =======================================================
+   ESTILO DO BOTÃO DE LINK (components/_link-button.css)
+   ======================================================= */
+
+.link-button {
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none; 
+  padding: 10px 24px;
+  border: 2px solid white;
+  border-radius: 30px; 
+  background-color: rgba(0, 0, 0, 0.3); 
+  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease; 
+  cursor: pointer;
+}
+
+/* ACESSIBILIDADE E INTERAÇÃO: Unindo o efeito de passar o mouse e focar pelo teclado */
+.link-button:hover,
+.link-button:focus {
+  background-color: var(--primary-color, #B9001F); 
+  transform: scale(1.03); 
+  outline: none; /* Remove a bordinha preta padrão do navegador ja que temos o efeito visual */
+}
+
+/* Detalhe extra: Uma bordinha de destaque dourada ou azul sutil se focado por teclado, se preferir */
+.link-button:focus-visible {
+  border-color: #FFF;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+/* Container do Ícone (Bolinha Vermelha) */
+.link-button .icon {
+  width: 32px;
+  height: 32px;
+  padding: 3px;
+  background-color: var(--primary-color, #B9001F);
+  border: solid 1px white;
+  background-clip: content-box;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; 
+}
+
+/* O truque do triângulo em CSS */
+.link-button .icon .play-icon {
+  border: solid 7px transparent; 
+  border-left-color: white; 
+  width: 0;
+  height: 0;
+  margin-left: 4px; 
+}
+
+/* Texto do Botão */
+.link-button .label {
+  margin-left: 12px;
+  font-weight: bold;
+  text-transform: uppercase; 
+  font-size: 0.9rem;
+  letter-spacing: 1px; 
+}

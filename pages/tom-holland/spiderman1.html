@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider-Man | De Volta ao Lar</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link href="../../assets/css/internal.css" rel="stylesheet" type="text/css" />
+  <!-- Adicionado o CSS do Fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+</head>
+
+<body>
+  <div id="loading-screen" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999; display:flex; justify-content:center; align-items:center; transition: opacity 0.5s;">
+    <img src="../../assets/images/icons/spider.svg" style="width:80px; animation: pulse 1s infinite;" alt="Carregando...">
+  </div>
+
+  <!-- Ajustado para main envelopando a estrutura central -->
+  <main class="s-wrapper">
+    <!-- Vídeo de background ocultado para leitores de tela -->
+    <video autoplay loop muted playsinline aria-hidden="true">
+      <source src="../../assets/videos/spiderman-2017-trailer.mp4" type="video/mp4" />
+    </video>
+    
+    <!-- Coluna da esquerda com menu de navegação acessível -->
+    <div class="s-left-column">
+      <nav class="navigator" aria-label="Navegação entre filmes do Homem-Aranha">
+        <div class="navigator__icon">
+          <a href="../../index.html" aria-label="Voltar para a página inicial">
+            <img src="../../assets/images/icons/spiderman1-tom.png" alt="Ícone Homem-Aranha" />
+          </a>
+        </div>
+        <ul>
+          <!-- CORRIGIDO: Removido class="active" e aria-current="page" manuais para automação do script.js -->
+          <li><a href="spiderman1.html" aria-label="Filme atual: Homem-Aranha 1">01</a></li>
+          <li><a href="spiderman2.html" aria-label="Ir para o Filme 2">02</a></li>
+          <li><a href="spiderman3.html" aria-label="Ir para o Filme 3">03</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Modificado para div estrutural interna e uso de tags semânticas nos blocos -->
+    <div class="s-main-content">
+      
+      <!-- Agrupando topo com o header -->
+      <header class="s-main-content__top">
+        <div class="s-logo">
+          <img src="../../assets/images/spiderman-tom/movie-01/logo.png" alt="Logo de Spider-Man: Homecoming (2017)" title="Spider-Man: Homecoming (2017)" />
+        </div>
+
+        <section class="s-description" aria-label="Ficha técnica e sinopse">
+          <div class="pills">
+            <ul>
+              <li>Ano: <time datetime="2017">2017</time></li>
+              <li>Diretor: Jon Watts</li>
+            </ul>
+          </div>
+          <div class="s-description__text">
+            <p><strong>Sinopse:</strong> Peter Parker tenta equilibrar sua vida de estudante comum no ensino médio com seu alter ego de Homem-Aranha. Sob o olhar atento de seu mentor Tony Stark, Peter precisa combater o perigoso vilão Abutre, que ameaça a segurança da cidade com armas de tecnologia avançada.</p>
+          </div>
+        </section>
+
+        <section class="s-links" aria-label="Mídias do filme">
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=39udgGPyYMg" class="link-button" target="_blank" rel="noopener noreferrer" aria-label="Assistir trailer de De Volta ao Lar (abre em uma nova aba)">
+                <span class="icon" aria-hidden="true">
+                  <div class="play-icon">&nbsp;</div>
+                </span>
+                <span class="label">
+                  Assistir trailer
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </header>
+
+      <!-- Seção dedicada para a galeria de fotos na parte inferior -->
+      <section class="s-main-content__bottom" aria-label="Galeria de fotos do filme">
+        <h2 class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Galeria de fotos do filme</h2>
+        
+        <div class="gallery">
+          <ul>
+            <!-- CORRIGIDO: Vinculado o data-fancybox e as imagens -full.jpg reais -->
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-01/gallery/image-01-full.jpg" aria-label="Ampliar imagem 1 do filme">
+                <img src="../../assets/images/spiderman-tom/movie-01/gallery/image-01.png" alt="Peter Parker conversando com Tony Stark no carro.">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-01/gallery/image-02-full.jpg" aria-label="Ampliar imagem 2 do filme">
+                <img src="../../assets/images/spiderman-tom/movie-01/gallery/image-02.png" alt="Homem-Aranha agachado no topo de um monumento em Washington.">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-01/gallery/image-03-full.jpg" aria-label="Ampliar imagem 3 do filme">
+                <img src="../../assets/images/spiderman-tom/movie-01/gallery/image-03.png" alt="O vilão Abutre voando com suas asas tecnológicas mecânicas.">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-01/gallery/image-04-full.jpg" aria-label="Ampliar imagem 4 do filme">
+                <img src="../../assets/images/spiderman-tom/movie-01/gallery/image-04.png" alt="Peter Parker na escola olhando para o seu traje escondido na mochila.">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <!-- CORRIGIDO: Scripts organizados na ordem correta -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="../../assets/scripts/script.js"></script>
+</body>
+
+</html>

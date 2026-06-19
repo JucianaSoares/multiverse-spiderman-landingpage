@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiverso | Spiderman 3</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link href="../../assets/css/internal.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+</head>
+<body>
+  <div id="loading-screen" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999; display:flex; justify-content:center; align-items:center; transition: opacity 0.5s;">
+    <img src="../../assets/images/icons/spider.svg" style="width:80px; animation: pulse 1s infinite;" alt="Carregando...">
+  </div>
+
+  <main class="s-wrapper">
+    
+    <video autoplay loop muted playsinline aria-hidden="true">
+      <source src="../../assets/videos/spiderman3-2007-trailer.mp4" type="video/mp4" />
+    </video>
+
+    <div class="s-left-column">
+      <nav class="navigator" aria-label="Navegação entre filmes e início">
+        <div class="navigator__icon">
+          <a href="../../index.html" aria-label="Voltar para a Página Inicial">
+            <img src="../../assets/images/icons/spiderman1.png" alt="Ícone Homem-Aranha" />
+          </a>
+        </div>
+        <ul>
+          <li><a href="spiderman1.html" aria-label="Ir para Homem-Aranha 1">01</a></li>
+          <li><a href="spiderman2.html" aria-label="Ir para Homem-Aranha 2">02</a></li>
+          <li><a href="spiderman3.html" aria-label="Filme atual: Homem-Aranha 3">03</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="s-main-content">
+      
+      <header class="s-main-content__top">
+        <div class="s-logo">
+          <img src="../../assets/images/spiderman-tobey/movie-03/logo.png" alt="Logotipo do filme Homem-Aranha 3 (2007)" title="Spiderman 3 (2007)" />
+        </div>
+
+        <section class="s-description" aria-label="Ficha técnica e sinopse">
+          <div class="pills">
+            <ul>
+              <li>Ano: 2007</li>
+              <li>Diretor: Sam Raimi</li>
+            </ul>
+          </div>
+
+          <div class="s-description__text">
+            <p><strong>Sinopse:</strong>&nbsp;Peter Parker parece finalmente ter encontrado o equilíbrio entre sua vida com Mary Jane e seus deveres como herói. Mas tudo muda quando uma misteriosa substância negra se une à sua roupa, alterando sua personalidade e trazendo à tona o seu lado mais sombrio, enquanto novos vilões como o Homem-Areia e Venom ameaçam a cidade.</p>
+          </div>
+        </section>
+
+        <section class="s-links" aria-label="Mídias do filme">
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=e5wUilOeOmg" class="link-button" target="_blank" aria-label="Assistir ao trailer oficial de Homem-Aranha 3 no YouTube">
+                <span class="icon">
+                  <div class="play-icon" aria-hidden="true">&nbsp;</div>
+                </span>
+                <span class="label">
+                  Assistir trailer
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+      </header>
+
+      <section class="s-main-content__bottom" aria-label="Galeria de fotos do filme">
+        <div class="gallery">
+          <ul>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-03/gallery/image-01-full.jpg" aria-label="Ampliar imagem 1 da galeria">
+                <img src="../../assets/images/spiderman-tobey/movie-03/gallery/image-01.png" alt="Homem-Aranha com o uniforme preto simbiótico agachado na chuva sob uma gárgula de prédio">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-03/gallery/image-02-full.jpg" aria-label="Ampliar imagem 2 da galeria">
+                <img src="../../assets/images/spiderman-tobey/movie-03/gallery/image-02.png" alt="O vilão Homem-Areia gigante feito de areia atacando no meio da cidade">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-03/gallery/image-03-full.jpg" aria-label="Ampliar imagem 3 da galeria">
+                <img src="../../assets/images/spiderman-tobey/movie-03/gallery/image-03.png" alt="Confronto entre o Homem-Aranha de traje preto e o Novo Duende no ar">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Scripts organizados e limpos -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="../../assets/scripts/script.js"></script>
+</body>
+</html>

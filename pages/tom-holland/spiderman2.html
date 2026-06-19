@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider-Man | Longe de Casa</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link href="../../assets/css/internal.css" rel="stylesheet" type="text/css" />
+  <!-- Adicionado o CSS do Fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+</head>
+
+<body>
+  <div id="loading-screen" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999; display:flex; justify-content:center; align-items:center; transition: opacity 0.5s;">
+    <img src="../../assets/images/icons/spider.svg" style="width:80px; animation: pulse 1s infinite;" alt="Carregando...">
+  </div>
+
+  <!-- Ajustado para main envelopando a estrutura central -->
+  <main class="s-wrapper">
+    <!-- Vídeo ocultado para leitores de tela por ser um elemento decorativo de fundo -->
+    <video autoplay loop muted playsinline aria-hidden="true">
+      <source src="../../assets/videos/spiderman2-2019-trailer.mp4" type="video/mp4" />
+    </video>
+    
+    <!-- Coluna da esquerda com menu de navegação acessível -->
+    <div class="s-left-column">
+      <nav class="navigator" aria-label="Navegação entre filmes do Homem-Aranha">
+        <div class="navigator__icon">
+          <a href="../../index.html" aria-label="Voltar para a página inicial">
+            <img src="../../assets/images/icons/spiderman1-tom.png" alt="Ícone Homem-Aranha" />
+          </a>
+        </div>
+        <ul>
+          <li><a href="spiderman1.html" aria-label="Ir para o Filme 1: De Volta ao Lar">01</a></li>
+          <!-- CORRIGIDO: Removido class="active" e aria-current="page" manuais para automação do script.js -->
+          <li><a href="spiderman2.html" aria-label="Filme atual: Filme 2: Longe de Casa">02</a></li>
+          <li><a href="spiderman3.html" aria-label="Ir para o Filme 3: Sem Volta para Casa">03</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Modificado de main para div estrutural interna para herdar o grid/flexbox corretamente -->
+    <div class="s-main-content">
+      
+      <!-- Topo da página agrupado semanticamente dentro de um header -->
+      <header class="s-main-content__top">
+        <div class="s-logo">
+          <img src="../../assets/images/spiderman-tom/movie-02/logo.png" alt="Logotipo do filme Spider-Man: Far From Home (2019)" title="Spider-Man: Far From Home (2019)" />
+        </div>
+
+        <section class="s-description" aria-label="Ficha técnica e sinopse">
+          <div class="pills">
+            <ul>
+              <li>Ano: <time datetime="2019">2019</time></li>
+              <li>Diretor: Jon Watts</li>
+            </ul>
+          </div>
+          <div class="s-description__text">
+            <p><strong>Sinopse:</strong> Peter Parker está em uma viagem de duas semanas pela Europa com seus amigos de colégio, quando é recrutado por Nick Fury para desvendar o mistério de criaturas que estão causando ataques e destruição pelo continente. Ele precisa unir forças com o enigmático Mysterio para conter a ameaça elemental.</p>
+          </div>
+        </section>
+
+        <section class="s-links" aria-label="Mídias do filme">
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=DYYtuKyZFnQ" class="link-button" target="_blank" rel="noopener noreferrer" aria-label="Assistir ao trailer oficial de Longe de Casa no YouTube (abre em uma nova aba)">
+                <span class="icon" aria-hidden="true">
+                  <div class="play-icon">&nbsp;</div>
+                </span>
+                <span class="label">
+                  Assistir trailer
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </header>
+
+      <!-- Seção da galeria na parte inferior -->
+      <section class="s-main-content__bottom" aria-label="Galeria de fotos do filme">
+        <div class="gallery">
+          <ul>
+            <!-- CORRIGIDO: Adicionado o atributo data-fancybox para o efeito de zoom -->
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-02/gallery/image-01.jpg" aria-label="Ampliar imagem 1 do filme">
+                <img src="../../assets/images/spiderman-tom/movie-02/gallery/image-01.jpg" alt="Peter Parker usando os óculos E.D.I.T.H. deixados por Tony Stark dentro do ônibus de viagem">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-02/gallery/image-02.jpg" aria-label="Ampliar imagem 2 do filme">
+                <img src="../../assets/images/spiderman-tom/movie-02/gallery/image-02.jpg" alt="Homem-Aranha com o traje preto de infiltração tática saltando em Praga">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-02/gallery/image-03.jpg" aria-label="Ampliar imagem 3 do filme">
+                <img src="../../assets/images/spiderman-tom/movie-02/gallery/image-03.jpg" alt="O Peter Parker apertando a mão do herói Mysterio">
+              </a>
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tom/movie-02/gallery/image-04.jpg" aria-label="Ampliar imagem 4 do filme">
+                <img src="../../assets/images/spiderman-tom/movie-02/gallery/image-04.jpg" alt="O Homem-Aranha, em traje vermelho e preto, está agachado na rua em meio a fogo e destruição, transmitindo tensão e ação.">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <!-- CORRIGIDO: Scripts organizados na ordem correta -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="../../assets/scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+@import url('reset.css');
+@import url('global.css');
+
+/* =======================================================
+   ESTRUTURA BASE E PLANO DE FUNDO (DESKTOP)
+   ======================================================= */
+
+body {
+  background-color: var(--primary-color);
+  overflow-x: hidden; /* Evita barras de rolagem indesejadas pelo efeito 3D */
+}
+
+body::before {
+  content: "";
+  background-image: url('../images/spider-man-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  z-index: -1; /* Garante que fique atrás de todo o conteúdo */
+}
+
+/* =======================================================
+   MENU SUPERIOR
+   ======================================================= */
+
+.s-menu {
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.s-menu__item {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 1.25rem;
+}
+
+.s-menu__icon {
+  width: 2.5rem;
+  margin: 0 1.25rem;
+  vertical-align: middle;
+}
+
+/* =======================================================
+   CONTAINER E CARROSSEL 3D (CONFIGURAÇÃO PARA DESKTOP)
+   ======================================================= */
+
+.s-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 2500px;
+  height: 65vh; 
+  min-height: 450px;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.s-cards-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;  /* Largura ideal para o Desktop */
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in-out;
+}
+
+.s-card {
+  border: 0.5rem solid white;
+  width: 100%;
+  height: 420px; /* Altura ideal para o Desktop */
+  position: absolute;
+  transition: filter .5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Órbita 3D para Telas Grandes (Computador / Laptop) */
+.s-cards-carousel .s-card:nth-child(1) { transform: rotateY(0deg) translateZ(35vw); }
+.s-cards-carousel .s-card:nth-child(2) { transform: rotateY(120deg) translateZ(35vw); }
+.s-cards-carousel .s-card:nth-child(3) { transform: rotateY(240deg) translateZ(35vw); }
+
+/* CORREÇÃO CIRÚRGICA: Separando o fundo da cidade do Aranha recortado */
+.s-card__background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* A cidade preenche o card todo */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.s-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* VOLTOU PARA CONTAIN: Tranca o boneco do Aranha na moldura sem vazar */
+  position: relative;
+  transition: transform 1s ease-in-out;
+  z-index: 2;
+}
+
+.s-card__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: bottom 1s ease-in-out;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+}
+
+/* =======================================================
+   CONTROLES INFERIORES
+   ======================================================= */
+
+.s-controller {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.s-controller__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.s-controller__button:hover {
+  transform: scale(1.1);
+}
+
+.s-controller__button:nth-child(2) {
+  margin: 0 3.75rem;
+}
+
+.s-controller__button--active {
+  background-color: white;
+  color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+  outline: 0.125rem solid white;
+}
+
+.s-controller__line {
+  background-color: white;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* =======================================================
+   EFEITOS DE HOVER ANIMADOS
+   ======================================================= */
+
+.s-card--hovered .s-card__background {
+  cursor: pointer;
+}
+
+.s-card--hovered .s-card__image {
+  transform: scale(1.4);
+  filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5));
+}
+
+.s-card--hovered .s-card__title {
+  bottom: 50%;
+}
+
+/* Alteração dinâmica do background do Body via ID injetado pelo JS */
+body#spider-man-01-hovered::before { background-image: url('../images/pic-sm-bg-01.jpg'); }
+body#spider-man-02-hovered::before { background-image: url('../images/pic-sm-bg-03.jpg'); }
+body#spider-man-03-hovered::before { background-image: url('../images/pic-sm-bg-02.jpg'); }
+
+body[id^="spider-man-"]::before {
+  opacity: 1;
+}
+
+body[id^="spider-man-"] .s-card:not(.s-card--hovered) {
+  filter: grayscale(100%);
+}
+
+/* =======================================================
+   RESPONSIVIDADE: COMPORTAMENTO EXCLUSIVO PARA CELULAR
+   ======================================================= */
+
+@media (max-width: 768px) {
+  
+  .s-menu {
+    padding: 0.75rem 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .s-menu__item {
+    margin: 0 4px;
+    font-size: 11px; 
+  }
+
+  .s-menu__icon {
+    width: 1.8rem;
+    margin: 0 4px;
+  }
+
+  .s-container {
+    perspective: 2000px; 
+    height: 50vh; 
+    min-height: auto; 
+    margin: 20px 0;
+  }
+
+  .s-cards-carousel {
+    transform: translateZ(-40vw) rotateY(0deg); 
+    width: 160px;  /* Largura reajustada proporcional */
+    height: 250px; /* Altura reajustada proporcional */
+  }
+
+  .s-cards-carousel .s-card {
+    border: 0.35rem solid white;
+    width: 100%;
+    height: 100%; 
+  }
+
+  /* Órbita 3D Adaptada para celular para não sobrepor nem sumir */
+  .s-cards-carousel .s-card:nth-child(1) { transform: rotateY(0deg) translateZ(38vw); }
+  .s-cards-carousel .s-card:nth-child(2) { transform: rotateY(120deg) translateZ(38vw); }
+  .s-cards-carousel .s-card:nth-child(3) { transform: rotateY(240deg) translateZ(38vw); }
+
+  .s-card__title {
+    font-size: 1.1rem;
+    bottom: 8px; /* Prende o texto estável na base do card menor */
+  }
+
+  .s-card--hovered .s-card__image {
+    transform: scale(1.2) !important; /* Evita que o Aranha corte acima do limite do celular */
+    filter: drop-shadow(15px 5px 3px rgba(0, 0, 0, .5));
+  }
+  
+  .s-card--hovered .s-card__title {
+    bottom: 40%;
+  }
+
+  .s-controller {
+    margin-top: 2rem;
+  }
+
+  .s-controller__button {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 0.9rem;
+  }
+
+  .s-controller__button:nth-child(2) {
+    margin: 0 2.5rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .s-container {
+    height: 50vh;
+  }
+  
+  .s-cards-carousel {
+    transform: translateZ(-45vw) rotateY(0deg);
+  }
+  
+  /* Ajuste preciso no Z para telas super finas */
+  .s-cards-carousel .s-card:nth-child(1) { transform: rotateY(0deg) translateZ(42vw); }
+  .s-cards-carousel .s-card:nth-child(2) { transform: rotateY(120deg) translateZ(42vw); }
+  .s-cards-carousel .s-card:nth-child(3) { transform: rotateY(240deg) translateZ(42vw); }
+}
